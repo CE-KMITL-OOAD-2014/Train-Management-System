@@ -1,0 +1,17 @@
+<?php
+
+
+$this->breadcrumbs=array(
+	'Lines'=>array('index'),
+	'Create',
+);
+
+$this->menu=array(
+	array('label'=>'List Line', 'url'=>array('index')),
+	array('label'=>'Manage Line', 'url'=>array('admin')),
+);
+?>
+
+<h1>Create Line</h1>
+
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
