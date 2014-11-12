@@ -50,9 +50,7 @@
 
             <div id="footer">
                 <ul>
-                    <li class="sitemap"><a href="#">Site Map</a></li>
-                    <li class="copyr"><a href="#"></a></li>
-                    <li class="allright"><a href="#"> <br>By Pae and Hok ^^</a></li>
+                    
                 </ul>
             </div><!-- footer -->
 
