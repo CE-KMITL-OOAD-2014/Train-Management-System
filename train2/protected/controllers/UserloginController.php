@@ -7,14 +7,7 @@ class UserloginController extends Controller
 	public function actions()
 	{
 	return array(
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
 			
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
 		);
 		
 	}
@@ -28,19 +21,19 @@ class UserloginController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('create'),
+			array('allow', 
+				'actions'=>array(''),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('admin','index','view','update','delete'),
+			array('allow',
+				'actions'=>array('admin','index','view','update','delete','create'),
 				'users'=>array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			array('allow', 
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			array('deny',
 				'users'=>array('*'),
 			),
 		);
@@ -58,8 +51,7 @@ class UserloginController extends Controller
 	{
 		$model=new Userlogin;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+
 
 		if(isset($_POST['Userlogin']))
 		{

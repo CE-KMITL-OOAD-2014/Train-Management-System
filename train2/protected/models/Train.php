@@ -47,8 +47,6 @@ class Train extends CActiveRecord
 	
 	public function search()
 	{
-	
-
 		$criteria=new CDbCriteria;
 		$criteria->compare('id',$this->id);
 		$criteria->compare('number',$this->number,true);
@@ -57,7 +55,6 @@ class Train extends CActiveRecord
 		$criteria->compare('dest',$this->dest,true);
 		$criteria->compare('time',$this->time,true);
 		$criteria->compare('cost',$this->cost,true);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

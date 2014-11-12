@@ -20,15 +20,13 @@ class UserIdentity extends CUserIdentity
 	{    
       $user=UserLogin::model()->find('username=?',array($this->username));
 	  if($user === null){
-	  $this->errorcode=self::ERROR_USERNAME_INVALID;
+	  $this->errorCode=self::ERROR_USERNAME_INVALID;
 	  }else if(!$user->validatePassword($this->password)){
 	  $this->errorCode=self::ERROR_USERNAME_INVALID;
 	  }else{
 	  $this->_id=$user->id;
 	  $this->username->$user->username;
 	  $this->errorCode=self::ERROR_NONE;
-    
-
 	}
 	return $this->errorCode==self::ERROR_NONE;
 	}

@@ -21,7 +21,6 @@ class Userlogin extends CActiveRecord
 			array('name, username, password, email', 'length', 'max'=>40),
 			array('brith_date', 'length', 'max'=>20),
 			array('id, name, brith_date, username, password, email', 'safe', 'on'=>'search'),
-			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}
 	public function relations()
@@ -38,7 +37,6 @@ class Userlogin extends CActiveRecord
 			'username' => 'Username',
 			'password' => 'Password',
 			'email' => 'Email',
-			'verifyCode'=>'Verification Code',
 		);
 	}
 

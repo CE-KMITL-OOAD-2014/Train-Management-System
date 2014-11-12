@@ -18,12 +18,14 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date'); ?>
+	     <?php $model->date=new CDbExpression(date('Y-m-d'));?>
+		(yyyy-mm-dd)<?php echo $form->labelEx($model,'date'); ?>
 		<?php echo $form->textField($model,'date'); ?>
 		<?php echo $form->error($model,'date'); ?>
 	</div>
 
 	<div class="row">
+	    <?php $model->time=new CDbExpression(date('h:m:s'));?>
 		<?php echo $form->labelEx($model,'time'); ?>
 		<?php echo $form->textField($model,'time'); ?>
 		<?php echo $form->error($model,'time'); ?>

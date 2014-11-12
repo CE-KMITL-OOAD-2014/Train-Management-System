@@ -1,6 +1,5 @@
 <?php
-/* @var $this TrainController */
-/* @var $model Train */
+
 $this->breadcrumbs=array(
 	'ค้นหาเส้นทางรถไฟ'=>array('admin'),
 );
@@ -16,6 +15,7 @@ $('.search-button').click(function(){
 	
 ));?>
 <?php
+if($_GET['yt0']=="Search"){
  $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'train-grid',
 	'dataProvider'=>$model->search(),
@@ -27,6 +27,7 @@ $('.search-button').click(function(){
 		'cost',
 	),
 )); 
+}
 ?>
 
 
